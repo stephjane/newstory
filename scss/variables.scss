@@ -1,0 +1,87 @@
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+// Tablets and small desktops
+$screen-lg-min: 1024px;
+// Large tablets and desktops
+$screen-xl-min: 1440px;
+// @media (min-width: $screen-md-min) {
+//   max-width: 1000px;
+// }
+$white: #FFFFFF;
+$black: #2D2A2B;
+$primary: #00BAE0;
+$secondary: #003E50;
+$tertiary: #F26A33;
+$tertiaryTwo: #FDC40E;
+$tertiaryThree: #41BD7D;
+
+@font-face {
+  font-family: "Barlow";
+  src: url("/fonts/Barlow-Regular.ttf");
+}
+@font-face {
+  font-family: "BarlowMedium";
+  src: url("/fonts/Barlow-Medium.ttf");
+}
+@font-face {
+  font-family: "BarlowBold";
+  src: url("/fonts/Barlow-Bold.ttf");
+}
+$primaryFont: "Barlow";
+$primaryMedium: "BarlowMedium";
+$primaryBold: "BarlowBold";
+
+h1,
+h2,
+h4,
+h6,
+p {
+  font-family: $primaryFont;
+  margin: 0;
+}
+
+h1 {
+  font-size: 26px;
+  letter-spacing: .75px;
+}
+h4 {
+  @media (min-width: $screen-lg-min) {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: .75px;
+  }
+}
+h6 {
+  text-transform: uppercase;
+  @media (min-width: $screen-lg-min) {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: .75px;
+  }
+}
+p {
+  @media (min-width: $screen-lg-min) {
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: .75px;
+  }
+}
+a {
+  font-family: $primaryBold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $black;
+  transition: .2s ease;
+  &:hover {
+    text-decoration: none;
+    color: $primary;
+  }
+  &.current {
+    color: $primary;
+  }
+}

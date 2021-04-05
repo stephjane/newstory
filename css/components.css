@@ -1,0 +1,216 @@
+@font-face {
+  font-family: "Barlow";
+  src: url("/fonts/Barlow-Regular.ttf"); }
+
+@font-face {
+  font-family: "BarlowMedium";
+  src: url("/fonts/Barlow-Medium.ttf"); }
+
+@font-face {
+  font-family: "BarlowBold";
+  src: url("/fonts/Barlow-Bold.ttf"); }
+
+h1,
+h2,
+h4,
+h6,
+p {
+  font-family: "Barlow";
+  margin: 0; }
+
+h1 {
+  font-size: 26px;
+  letter-spacing: .75px; }
+
+@media (min-width: 1024px) {
+  h4 {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: .75px; } }
+
+h6 {
+  text-transform: uppercase; }
+  @media (min-width: 1024px) {
+    h6 {
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: .75px; } }
+
+@media (min-width: 1024px) {
+  p {
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: .75px; } }
+
+a {
+  font-family: "BarlowBold";
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #2D2A2B;
+  transition: .2s ease; }
+  a:hover {
+    text-decoration: none;
+    color: #00BAE0; }
+  a.current {
+    color: #00BAE0; }
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  height: 100%; }
+  nav .menu-items {
+    background: #2D2A2B;
+    padding: 40px 30px 60px 30px;
+    transition: .2s ease; }
+  nav .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    color: #FFFFFF;
+    cursor: pointer;
+    background: #2D2A2B;
+    transition: .2s ease; }
+    nav .item:hover {
+      color: #00BAE0; }
+    nav .item .icon {
+      width: 40px;
+      height: 40px;
+      background: white;
+      margin-right: 0px;
+      transition: .2s ease; }
+    nav .item p {
+      max-width: 0px;
+      opacity: 0;
+      font-size: 20px;
+      line-height: 20px;
+      transition: .2s ease; }
+    nav .item.current .icon {
+      background: #00BAE0; }
+    nav .item.current p {
+      color: #00BAE0; }
+  nav:hover .item p {
+    max-width: 500px;
+    opacity: 1; }
+  nav:hover .icon {
+    margin-right: 30px; }
+  nav:hover .menu-items {
+    padding: 40px 40px 60px 30px; }
+
+.dashHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 140px; }
+  .dashHeader img.logo {
+    height: 30px; }
+
+.btn {
+  display: inline;
+  color: #FFFFFF;
+  background: #00BAE0;
+  padding: 14px 28px;
+  border-radius: 2px;
+  transition: .2s ease; }
+  .btn:hover {
+    color: #FFFFFF;
+    background: #009ABA; }
+  .btn img {
+    width: 14px;
+    margin-right: 10px; }
+
+input {
+  font-family: "Barlow";
+  font-size: 16px;
+  letter-spacing: .75px;
+  border: 0;
+  background: #F2F2F2;
+  padding: 10px;
+  text-transform: uppercase; }
+
+.filter {
+  font-family: "Barlow";
+  display: flex;
+  align-items: flex-end;
+  grid-gap: 40px;
+  margin: 80px 140px 90px; }
+  .filter__set {
+    display: flex;
+    flex-direction: column; }
+  .filter__prev {
+    font-family: "BarlowMedium";
+    font-size: 14px;
+    margin-bottom: 10px; }
+  .filter__dateRange {
+    margin-left: 40px; }
+    .filter__dateRange span {
+      padding: 0 10px; }
+
+.container {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-gap: 10%;
+  margin: 0px 90px 90px 140px; }
+
+.summary h1 {
+  font-family: "BarlowMedium";
+  margin-bottom: 20px; }
+
+.summary__filter {
+  display: flex;
+  grid-gap: 40px;
+  margin-bottom: 10px; }
+
+.summary__row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 45% 20% 20%;
+  margin-bottom: 80px; }
+
+.summary__col {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-gap: 30px; }
+  .summary__col h4 {
+    display: flex;
+    align-items: center; }
+  .summary__col img {
+    width: 24px;
+    margin-right: 10px; }
+
+.list__item {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  border-bottom: 0.2px solid #2D2A2B; }
+  .list__item div {
+    display: flex; }
+  .list__item img {
+    width: 24px;
+    margin-right: 10px; }
+  .list__item p {
+    display: flex;
+    align-items: center; }
+
+.list__filter {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px; }
+  .list__filter div {
+    display: flex;
+    grid-gap: 10px;
+    align-items: center; }
+  .list__filter svg {
+    cursor: pointer; }
+    .list__filter svg path {
+      fill: #2D2A2B;
+      transition: .2s; }
+    .list__filter svg.down {
+      transform: rotate(180deg); }
+    .list__filter svg:hover path, .list__filter svg.current path {
+      fill: #00BAE0; }
